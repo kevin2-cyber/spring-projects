@@ -1,1 +1,1 @@
-# the-digerati-website
+# spring and springboot projects
