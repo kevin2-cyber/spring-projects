@@ -1,1 +1,1 @@
-# spring and springboot projects
+# Spring and spring boot projects
