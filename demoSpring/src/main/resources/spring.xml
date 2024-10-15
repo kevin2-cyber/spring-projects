@@ -1,0 +1,20 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dev" class="com.kimikevin.Dev" autowire="byType">
+<!--                <property name="computer" ref="laptop"/>-->
+    </bean>
+<!--        <property name="age" value="12"/>  &lt;!&ndash; using setter injection&ndash;&gt;-->
+<!--        <constructor-arg value="14"/> &lt;!&ndash; using constructor injection&ndash;&gt;-->
+
+<!--        <property name="laptop" ref="lap"/>-->
+<!--        <constructor-arg ref="lap"/>-->
+    <bean id="laptop" class="com.kimikevin.Laptop" primary="true"/>
+
+    <bean id="desktop" class="com.kimikevin.Desktop">
+
+    </bean>
+
+</beans>
