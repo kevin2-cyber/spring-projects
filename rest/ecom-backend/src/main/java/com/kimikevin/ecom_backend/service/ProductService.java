@@ -26,14 +26,22 @@ public class ProductService {
                 .orElse(null);
     }
 
-    public Product addProduct(Product product, MultipartFile imageFile) throws IOException {
+    public Product addProduct(
+            Product product,
+            MultipartFile imageFile
+    ) throws IOException {
         product.setImageName(imageFile.getOriginalFilename());
         product.setImageType(imageFile.getContentType());
         product.setImageData(imageFile.getBytes());
         return repository.save(product);
     }
 
-    public Product updateProduct(int id, Product product, MultipartFile imageFile) throws IOException {
+    public Product updateProduct(
+            int id,
+            Product product,
+            MultipartFile imageFile
+    ) throws IOException {
+        product =  repository.findById(id).orElseThrow();
         product.setImageData(imageFile.getBytes());
         product.setImageName(imageFile.getOriginalFilename());
         product.setImageType(imageFile.getContentType());
