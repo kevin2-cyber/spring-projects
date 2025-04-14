@@ -63,7 +63,7 @@ public class ProductController {
     public ResponseEntity<String> updateProduct(@PathVariable int id,
                                                 @RequestPart Product product,
                                                 @RequestPart MultipartFile imageFile) {
-        Product updatedProduct = null;
+        Product updatedProduct;
         try {
             updatedProduct = service.updateProduct(id, product, imageFile);
         } catch (IOException e) {
